@@ -1,12 +1,9 @@
 # ecs-wisnuc-server
 
-### Vision Statement
-
-+ Internal use
-
-  - Webpage
-  
-    a. User rights management
+### Vision Statement<p>
++ **Internal use**<p>
+  - **Webpage**<p>
+    a. User rights management<p>
     ```
       example:
 
@@ -14,36 +11,24 @@
       kang: tester -> download & test (download private & beta url, just like: http://appifi.wisnuc.com/release/fruitmix-android/beta/[xxx])
       mark: manager -> 1. modify version ID 2. promote/demote stable url (just like: http://appifi.wisnuc.com/release/fruitmix-android/stable/[xxx])
     ```
-    b. Binary program download
+    b. Binary program download<p>
+    c. Version list<p>
+    d. Build `electron` project manual<p>
     
-    c. Version list
+  - **Restful API**<p>
+    a. Version list<p>
+    b. ...<p>
     
-    d. Build `electron` project manual
-    
-  - Restful API
-  
-    a. Version list
-    
-    b. ...
-    
-  - Server
-  
+  - **Server**<p>
     a. Auto build & distribute `electron` project -> github
-    
     b. Local `electron` auto update server -> squirrel
-    
     c. Create `installer` for `electron` project
   
-+ External use
-
-  - Webpage
-  
-    a. User rights management
++ **External use**<p>
+  - **Webpage**<p>
+    a. User rights management<p>
+    b. Binary program download<p>
     
-    b. Binary program download
-    
-  - Restful API
-  
-    a. Version list
-    
-    b. ...
+  - **Restful API**<p>
+    a. Version list<p>
+    b. ...<p>
