@@ -9,8 +9,12 @@
   
 ```
   run as root
+  using vpn
   ??? npm config set strict-ssl false ???
   apt-get install libgnome-keyring-dev
-  npm install yarn --registry=https://registry.npm.taobao.org
+  npm install yarn
+  npm install
+  
+  ./node_modules/.bin/build --win --x64
 
 ```
