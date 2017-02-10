@@ -15,6 +15,7 @@
   npm install yarn
   npm install
   
+  npm install electron-builder
   ./node_modules/.bin/build --win --x64
 
 ```
