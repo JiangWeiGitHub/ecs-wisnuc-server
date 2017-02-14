@@ -17,5 +17,8 @@
   
   npm install electron-builder
   ./node_modules/.bin/build --win --x64
+  
+  /package.json --> development
+  /app/package.json --> production
 
 ```
