@@ -9,14 +9,75 @@
   
 ```
   *****************************************************************************
-  * onshape-desktop-shell -->https://github.com/develar/onshape-desktop-shell *
+  * onshape-desktop-shell *
   git clone https://github.com/develar/onshape-desktop-shell
   cd onshape-desktop-shell
   npm install yarn (vpn)
   npm install (vpn)
   npm run dist  
   *****************************************************************************
+  
+  *****************************************************************************
+  * electron-quick-start *
+  git clone https://github.com/electron/electron-quick-start.git
+  cd electron-quick-start
+  npm install electron-builder
+  npm install
+  
+  *****************************************************************************
+  
+  *****************************************************************************
+  git clone https://github.com/wisnuc/fruitmix-desktop.git  
+  cd fruitmix-desktop
+  git checkout transimission
+  ??? npm install electron-prebuilt --save-dev ???
+  ??? npm install webpack electron-packager -g ???
+  npm install electron-builder yarn
+  npm install
+  webpack
+  npm run build
+  npm prune --production
+  electron-packager . --no-prune --arch=x64 --platform=linux
+  *****************************************************************************
 
+  *****************************************************************************
+  /electron-builder.yml --> ./node_modules/.bin/build --config ./electron-builder.yml --win (--linux)
+  
+  appId: com.example.app
+  copyright: Example co
+  productName: MyApp
+
+  asar: true
+
+  directories:
+    buildResources: /
+    output: dist/
+
+  files:
+    - "**/*"
+
+  dmg:
+    contents:
+      - type: link
+        path: /Applications
+        x: 410
+        y: 150
+      - type: file
+        x: 130
+        y: 150
+
+  mac:
+    target: dmg
+    category: public.app-category.tools
+
+  win:
+    target: nsis
+
+  linux:
+    target:
+      - deb
+      - AppImage
+  *****************************************************************************
 
 
   run as root
