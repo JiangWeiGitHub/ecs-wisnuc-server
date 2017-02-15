@@ -27,59 +27,71 @@
   *****************************************************************************
   
   *****************************************************************************
-  git clone https://github.com/wisnuc/fruitmix-desktop.git  
+  * fruitmix-desktop *
+  git clone https://github.com/wisnuc/fruitmix-desktop.git
   cd fruitmix-desktop
   git checkout transimission
-  ??? npm install electron-prebuilt --save-dev ???
-  ??? npm install webpack electron-packager -g ???
-  npm install electron-builder yarn
-  npm install
-  webpack
-  npm run build
-  npm prune --production
-  electron-packager . --no-prune --arch=x64 --platform=linux
-  *****************************************************************************
-
-  *****************************************************************************
-  /electron-builder.yml --> ./node_modules/.bin/build --config ./electron-builder.yml --win (--linux)
+  npm install electron-prebuilt --save-dev
+  npm install electron-builder webpack
   
-  appId: com.example.app
-  copyright: Example co
-  productName: MyApp
+  ** edit package.json **
+    remove *electron-prebuilt* from dependencies
+    add *author*
+  ***********************
+  
+  npm install
+  webpack --> pack frontend
+  npm run build --> pack backend
+  ?? npm prune --production ??
+  
+  ** edit electron-builder.yml **
+    /electron-builder.yml --> ./node_modules/.bin/build --config ./electron-builder.yml --win (--linux)
 
-  asar: true
+    **********************
+    appId: com.example.app
+    copyright: Example co
+    productName: MyApp
 
-  directories:
-    buildResources: /
-    output: dist/
+    asar: true
 
-  files:
-    - "**/*"
+    directories:
+      buildResources: /
+      output: dist/
 
-  dmg:
-    contents:
-      - type: link
-        path: /Applications
-        x: 410
-        y: 150
-      - type: file
-        x: 130
-        y: 150
+    files:
+      - "**/*"
 
-  mac:
-    target: dmg
-    category: public.app-category.tools
+    dmg:
+      contents:
+        - type: link
+          path: /Applications
+          x: 410
+          y: 150
+        - type: file
+          x: 130
+          y: 150
 
-  win:
-    target: nsis
+    mac:
+      target: dmg
+      category: public.app-category.tools
 
-  linux:
-    target:
-      - deb
-      - AppImage
+    win:
+      target: nsis
+
+    linux:
+      target:
+        - deb
+        - AppImage
+        
+    **********************
+
+  ***********************
+  
+  ** mkdir folders **
+    mkdir tmp media
+  *******************************  
+  
   *****************************************************************************
-
-
   run as root
   using vpn
   ??? npm config set strict-ssl false ???
