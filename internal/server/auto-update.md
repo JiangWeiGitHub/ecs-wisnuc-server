@@ -45,7 +45,7 @@
   ?? npm prune --production ??
   
   ** edit electron-builder.yml **
-    /electron-builder.yml --> ./node_modules/.bin/build --config ./electron-builder.yml --win (--linux)
+    /electron-builder.yml
 
     **********************
     appId: com.example.app
@@ -88,8 +88,10 @@
   ***********************
   
   ** mkdir folders **
-    mkdir tmp media
-  *******************************  
+    mkdir tmp media download
+  *******************************
+  
+  ./node_modules/.bin/build --config ./electron-builder.yml --win (--linux)
   
   *****************************************************************************
   run as root
