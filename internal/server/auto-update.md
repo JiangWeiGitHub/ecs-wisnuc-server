@@ -27,7 +27,7 @@
   *****************************************************************************
   
   *****************************************************************************
-  * fruitmix-desktop *
+  * fruitmix-desktop * --> ubuntu 16.04.1 amd64
   git clone https://github.com/wisnuc/fruitmix-desktop.git
   cd fruitmix-desktop
   git checkout transimission
@@ -36,7 +36,7 @@
   
   ** edit package.json **
     remove *electron-prebuilt* from dependencies
-    add *author*
+    add *author* --> "author": "jiangwei <wei.jiang@winsuntech.cn>"
   ***********************
   
   npm install
@@ -94,6 +94,77 @@
   ./node_modules/.bin/build --config ./electron-builder.yml --win (--linux)
   
   *****************************************************************************
+  
+  *****************************************************************************
+  * fruitmix-desktop * --> OS X 10.10
+  git clone https://github.com/wisnuc/fruitmix-desktop.git
+  cd fruitmix-desktop
+  git checkout transimission
+  npm install electron-prebuilt --save-dev
+  npm install electron-builder webpack
+  
+  ** edit package.json **
+    remove *electron-prebuilt* from dependencies
+    add *author* --> "author": "jiangwei <wei.jiang@winsuntech.cn>"
+  ***********************
+  
+  npm install
+  webpack --> pack frontend
+  npm run build --> pack backend
+  ?? npm prune --production ??
+  
+  ** edit electron-builder.yml **
+    /electron-builder.yml
+
+    **********************
+    appId: com.example.app
+    copyright: Example co
+    productName: MyApp
+
+    asar: true
+
+    directories:
+      buildResources: /
+      output: dist/
+
+    files:
+      - "**/*"
+
+    dmg:
+      contents:
+        - type: link
+          path: /Applications
+          x: 410
+          y: 150
+        - type: file
+          x: 130
+          y: 150
+
+    mac:
+      target: dmg
+      category: public.app-category.tools
+
+    win:
+      target: nsis
+
+    linux:
+      target:
+        - deb
+        - AppImage
+        
+    **********************
+
+  ***********************
+  
+  ** mkdir folders **
+    mkdir tmp media download
+  *******************************
+  
+  ./node_modules/.bin/build --config ./electron-builder.yml --mac
+  
+  *****************************************************************************
+  
+  
   run as root
   using vpn
   ??? npm config set strict-ssl false ???
