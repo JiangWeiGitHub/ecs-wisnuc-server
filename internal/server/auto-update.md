@@ -52,7 +52,7 @@
     copyright: Example co
     productName: MyApp
 
-    asar: false ### true --> some folders can not access ###
+    asar: true ### true --> some folders can not access ###
 
     directories:
       buildResources: /
@@ -121,7 +121,7 @@
     copyright: Example co
     productName: MyApp
 
-    asar: false ### true --> some folders can not access ###
+    asar: true ### true --> some folders can not access ###
 
     directories:
       buildResources: /
