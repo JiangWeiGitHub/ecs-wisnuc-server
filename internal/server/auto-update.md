@@ -180,5 +180,31 @@
   /app/package.json --> production
   
   To ensure your dependencies are always updated based on both files, simply add "postinstall": "install-app-deps" to your development package.json. This will basically automatically trigger an npm install within your app directory so you don't have to do this work every time you install/update your dependencies.
+  
+  ***************************************************
+  travis -> .travis.yml
+  language: node_js
+  node_js:
+      - "node"
+      - "6"
+  install:
+      - cd /
+      - mkdir git
+      - git clone https://github.com/wisnuc/fruitmix-desktop.git
+      - cd fruitmix-desktop
+      - git checkout transimission
+      - sed -i '5i \  \"author\": \"jiangwei <wei.jiang@winsuntech.cn>\"' package.json
+      - sed -i '/electron-prebuilt/'d package.json
+      - npm install electron-prebuilt --save-dev
+      - npm install electron-builder webpack
+      - npm install
+      - webpack
+      - npm run build
+  script:
+      - ./node_modules/.bin/build --config ./electron-builder.yml --mac
+
+  ***************************************************
+  
+  
 
 ```
