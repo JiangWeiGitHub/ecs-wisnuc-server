@@ -7,6 +7,9 @@
     - Official Site: [Sample Project](https://github.com/develar/onshape-desktop-shell)
   + Official Site: [squirrel-updates-server](https://github.com/Aluxian/squirrel-updates-server)
   
+### Sample
+  + [Site](https://github.com/iffy/electron-updater-example)
+  
 ```
   *****************************************************************************
   * onshape-desktop-shell *
