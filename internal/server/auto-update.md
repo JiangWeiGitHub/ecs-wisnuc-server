@@ -4,11 +4,11 @@
   + Official Site: [electron - auto-updater](http://electron.atom.io/docs/api/auto-updater/)
   + Official Site: [nuts](https://github.com/GitbookIO/nuts)
   + Official Site: [electron-builder](https://github.com/electron-userland/electron-builder)
-    - Official Site: [Sample Project](https://github.com/develar/onshape-desktop-shell)
+  + Official Site: [electron-builder -> wiki -> auto update](https://github.com/electron-userland/electron-builder/wiki/Auto-Update)
   + Official Site: [squirrel-updates-server](https://github.com/Aluxian/squirrel-updates-server)
   
 ### Sample
-  + [Site](https://github.com/iffy/electron-updater-example)
+  + [Good Site](https://github.com/iffy/electron-updater-example)
   
 ```
   *****************************************************************************
